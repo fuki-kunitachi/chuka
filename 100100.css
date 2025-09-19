@@ -1,0 +1,196 @@
+/* セクション土台 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1000;
+  background: #fff;
+}
+.hero {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  overflow: hidden;
+  background: #fffaf8; /* 必要なら */
+  margin-right: 0;
+  margin-left: 0;
+  background-image: url("images/hero-pc.png"); /* 背景画像を指定 */
+  background-position: top center;
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 背景画像を繰り返さない */
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    background-image: url("images/hero-sp.png");
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero {
+    background-image: url("images/hero-se.png");
+  }
+}
+
+/* 背景レイヤー（飾り） */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none; /* 背景がクリックを邪魔しない */
+}
+.bg-item {
+  position: absolute;
+  max-width: clamp(160px, 20vw, 380px);
+  height: auto;
+}
+
+/* 本文レイヤー（中央寄せ） */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  /* ここだけで中央寄せすればOK。背景は無視して良い */
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: clamp(12px, 3vw, 20px);
+  place-content: center; /* 縦横ど真ん中 */
+  text-align: center;
+  padding: clamp(16px, 4vw, 48px);
+}
+
+/* 上・下のテキスト */
+.hero-text {
+  font-weight: 600;
+  font-size: clamp(18px, 2.2vw, 25px);
+  letter-spacing: 0.2em; /* %は無効。em/pxで指定 */
+  color: #222;
+}
+.hero-text-under {
+  font-weight: 400;
+  font-size: clamp(14px, 1.8vw, 20px);
+  letter-spacing: 0.18em;
+  color: #222;
+}
+
+/* 中央3要素（富 / 店主 / 記） */
+.hero-center {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: end; /* ベースラインぽく下端を揃える */
+  column-gap: clamp(12px, 5vw, 56px);
+}
+
+/* 左右のアウトライン文字（SVG画像） */
+.hero-fuki {
+  width: clamp(120px, 20vw, 220px);
+  height: auto;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  z-index: 1; /* 店主より後ろにしたければ 0 に */
+}
+
+/* 真ん中の店主イラストを前面に */
+.logo-img-hero {
+  height: clamp(160px, 24vw, 260px);
+  width: auto;
+  display: block;
+  z-index: 2;
+}
+
+@media (max-width: 1023px) {
+  .hero-content {
+    padding-top: 17vh; /* 上方向に余白を追加 */
+  }
+}
+
+@media (max-width: 764px) {
+  .hero-text {
+    font-size: clamp(18px, 2.2vw, 20px);
+  }
+  .hero-fuki {
+    width: clamp(80px, 20vw, 90px);
+    padding-bottom: 5vh;
+  }
+  .logo-img-hero {
+    height: clamp(160px, 24vw, 190px);
+    width: auto;
+    display: block;
+    z-index: 2;
+  }
+}
+
+/* 固定配置の丸いバナー */
+.reserve-banner {
+  position: fixed;
+  right: 20px; /* 画面右端からの距離 */
+  bottom: 20px; /* 画面下からの距離 */
+  width: 240px; /* PCサイズ */
+  height: 240px;
+  border: 1px solid #222;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  text-decoration: none;
+  color: #222;
+  z-index: 1000; /* 常に前面に出す */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.reserve-banner:hover {
+  opacity: 0.8; /* ホバー時の軽い反応 */
+}
+.reserve-banner.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+/* 中身 */
+.reserve-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.reserve-title {
+  font-family: "Shippori Mincho", serif;
+  font-size: 24px;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.reserve-sub {
+  font-family: "Shippori Mincho", serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.reserve-img {
+  width: 55px;
+  height: auto;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .reserve-banner {
+    display: none;
+  }
+  .reserve-title {
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    margin-top: 2vh;
+  }
+  .reserve-sub {
+    font-size: 12px;
+  }
+  .reserve-img {
+    width: 35px;
+    margin-bottom: 2vh;
+  }
+}

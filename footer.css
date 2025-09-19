@@ -1,0 +1,280 @@
+/* ===== Footer base ===== */
+.footer {
+  background: url("images/red-wall.png") center/cover no-repeat;
+  color: #fffcfc;
+  font-family: "Shippori Mincho", serif;
+  padding: 48px 4vw 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 3カラム：左/中央/右 */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1 1 0;
+  min-width: 320px;
+}
+.footer-center {
+  align-items: center;
+  text-align: center;
+  margin-left: 100px;
+}
+.footer-left {
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1 1 0;
+  min-width: 240px;
+}
+.footer-right {
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1 1 0;
+  min-width: 240px;
+}
+
+/* 見出し（左右に細ライン） */
+.with-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  letter-spacing: 0.18em;
+  margin: 6px 0 10px;
+  font-weight: 400;
+}
+.with-lines::before,
+.with-lines::after {
+  content: "";
+  width: 56px;
+  height: 2px;
+  background: #fffcfc;
+  opacity: 0.9;
+}
+
+/* 中央大見出し */
+.footer-lead {
+  font-size: 24px;
+}
+
+/* ニューモーフィック電話ボックス */
+.footer-phone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fffcfc;
+  color: #111;
+  padding: 18px 28px;
+  border-radius: 28px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  min-width: 420px;
+  max-width: 520px;
+}
+.footer-phone__ic {
+  font-size: 24px;
+}
+.footer-phone__num {
+  font-size: 30px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+.footer-sns__img {
+  height: 30px;
+  width: 30px;
+}
+.footer-sns__img-instagram {
+  height: 25px;
+  width: 25px;
+}
+
+/* 2行ナビ */
+.footer-nav {
+  margin-top: 14px;
+}
+.footer-nav__row {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+.footer-nav a {
+  opacity: 0.95;
+}
+.footer-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ブランド行（お好みで） */
+.footer-brandline {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
+  opacity: 0.95;
+}
+.footer-brandline__sub {
+  letter-spacing: 0.18em;
+}
+.footer-brandline__logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+.footer-sns {
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 左ボタン */
+.footer-btn {
+  display: flex;
+  align-items: center;
+  background: #fffbfb;
+  color: #111;
+  padding: 18px 0px 18px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  height: 70px;
+  width: 270px;
+  gap: 16px;
+}
+/* 右ボタン*/
+.footer-btn-right {
+  display: flex;
+  align-items: center;
+  background: #fffbfb;
+  color: #111;
+  padding: 18px 0px 18px 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  margin-left: 50px;
+  height: 70px;
+  width: 270px;
+  gap: 16px;
+}
+.footer-btn__label {
+  font-size: 20px;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+}
+
+/* 角丸方向 */
+.footer-btn--left {
+  border-radius: 20px 0 0 0;
+}
+.footer-btn--right {
+  border-radius: 0 20px 0 0;
+}
+
+/* 先頭/末尾の小さな三角（▶/◀ っぽい矢印） */
+.footer-btn__chev {
+  width: 0;
+  height: 0;
+  border-right: 12px solid #9d1e22; /* ◀ */
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+.footer-btn__chev--right {
+  border-right: none;
+  border-left: 12px solid #9d1e22; /* ▶ */
+}
+
+/* 見た目の微調整 */
+.footer-head {
+  font-size: 20px;
+}
+
+.tel-num-footer {
+  font-size: 28px;
+  color: #222;
+  margin-left: 50px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1080px) {
+  .footer {
+    gap: 3vw;
+  }
+  .footer-phone {
+    min-width: 320px;
+    padding: 16px 22px;
+  }
+  .footer-phone__num {
+    font-size: 26px;
+  }
+  .footer-nav__row {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-col {
+    width: min(560px, 92%);
+    align-items: center;
+  }
+  .footer-btn {
+    width: 100%;
+    max-width: none;
+  }
+  .footer-phone {
+    width: 100%;
+    max-width: none;
+  }
+  .footer-nav__row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+/* スマホ ＆ iPad縦：並び替え */
+@media (max-width: 767px), (max-width: 834px) and (orientation: portrait) {
+  /* 並び順（order） */
+  .footer-center {
+    order: 1;
+  }
+  .footer > .footer-col:first-of-type {
+    order: 2;
+  } /* 各種予約サイト（左カラム） */
+  .footer-right {
+    order: 3;
+  }
+
+  /* モバイル時の余白リセット（左右のマージンを中央寄せ用に0へ） */
+  .footer-center,
+  .footer > .footer-col:first-of-type,
+  .footer-right {
+    margin-left: 0 !important;
+  }
+
+  /* 右ボタンも幅100%に（左は既に指定済み） */
+  .footer-btn-right {
+    max-width: none;
+    width: 240px;
+    margin-right: 8vw;
+  }
+  .footer-left {
+    margin-right: 12vw;
+  }
+  .footer-center {
+    margin-bottom: 6vw;
+  }
+  .tel-num-footer {
+    margin-left: 24px;
+  }
+}

@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>中華料理 富記</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Giga:wght@100..900&family=Shippori+Mincho&family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Maru+Gothic:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="100100.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="white-background.css" />
+    <link rel="canonical" href="https://wasedasai.github.io/2025-official/" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="国立駅の中華料理「富記」の公式サイトです"
+    />
+    <meta
+      name="keywords"
+      content="国立駅,中華料理,富記,宴会,テイクアウト,餃子,国立市,飲み放題"
+    />
+    <meta
+      property="og:url"
+      content="https://wasedasai.github.io/2025-official/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="中華料理 富記 公式サイト" />
+    <meta property="og:description" content="中華料理 富記 公式サイトです。" />
+    <meta property="og:site_name" content="中華料理 富記 公式サイト" />
+    <meta
+      property="og:image"
+      content="https://wasedasai.github.io/2025-official/img/sansan-og_image.png"
+    />
+    <link rel="icon" href="img/favicon.ico" type="image/png" />
+    <meta
+      name="google-site-verification"
+      content="PREUoAvDPGm4IBv_BUsNCwKUSFRjLSaLSSNL8bfFCAE"
+    />
+  </head>
+
+  <body>
+    <!-- ヘッダ余白（固定ヘッダ前提ならCSSでpadding-topに移行推奨） -->
+    <div style="height: 130px; width: 100%"></div>
+
+    <header>
+      <div class="header-inner">
+        <!-- 左：ロゴ -->
+        <a class="logo" href="/">
+          <img src="images/fuki-oji.png" alt="富記" class="logo-img" />
+          <span class="logo-text">富記</span>
+        </a>
+
+        <div class="cta-wrap">
+          <!-- 上段：電話＋予約 -->
+          <div class="cta-area">
+            <a
+              class="tel"
+              href="tel:0425057781"
+              aria-label="電話 042-505-7781"
+            >
+              <img src="images/phone-black.png" alt="" class="tel-ic" />
+              <span class="tel-num">042-505-7781</span>
+            </a>
+            <a class="reserve-btn" href="#footer">ネットご予約はこちらから</a>
+          </div>
+
+          <nav
+            id="global-nav"
+            class="global-nav"
+            aria-label="グローバルナビゲーション"
+          >
+            <ul>
+              <li><a href="/">ホーム</a></li>
+              <li><a href="#menu">メニュー</a></li>
+              <li><a href="#party">宴会</a></li>
+              <li><a href="#takeout">テイクアウト</a></li>
+              <li><a href="#access">アクセス</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- ハンバーガーアイコン -->
+        <button
+          class="hamburger-container"
+          aria-label="メニューを開く"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- オーバーレイメニュー -->
+    <nav id="mobileMenu" class="mobile-menu" aria-label="スマホメニュー" hidden>
+      <button id="closeBtn" aria-label="メニューを閉じる">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+      </button>
+
+      <div class="mobile-header">
+        <a class="logo" href="/">
+          <img src="images/fuki-oji.png" alt="富記" class="logo-img" />
+          <span class="logo-text">富記</span>
+        </a>
+        <div class="cta-wrap">
+          <div class="cta-area">
+            <a
+              class="tel"
+              href="tel:0425057781"
+              aria-label="電話 042-505-7781"
+            >
+              <img src="images/phone-black.png" alt="" class="tel-ic" />
+              <span class="tel-num">042-505-7781</span>
+            </a>
+            <a class="reserve-btn" href="#footer">ネットご予約はこちらから</a>
+          </div>
+        </div>
+      </div>
+
+      <ul>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#party">宴会</a></li>
+        <li><a href="#takeout">テイクアウト</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+
+    <a href="#footer" class="reserve-banner">
+      <div class="reserve-inner">
+        <p class="reserve-title">予約する</p>
+        <p class="reserve-sub">ご宴会・テイクアウト</p>
+        <img src="images/fuki-oji.png" alt="富記" class="reserve-img" />
+      </div>
+    </a>
+
+    <section class="hero">
+      <!-- <div class="hero-bg">
+        <img
+          src="./images/kurozu-subuta.png"
+          class="bg-item bg-subuta"
+          alt=""
+        />
+        <img src="./images/gyoza.png" class="bg-item bg-gyoza" alt="" />
+        <img
+          src="./images/kirin-beer.png"
+          class="bg-item bg-kirin-beer"
+          alt=""
+        />
+        <img
+          src="./images/tomato-tamago.png"
+          class="bg-item bg-tomato-tamago"
+          alt=""
+        />
+        <img src="./images/toriniku.png" class="bg-item bg-toriniku" alt="" />
+        <img src="./images/shokoshu3.png" class="bg-item bg-shokoshu3" alt="" />
+        <img src="./images/shokoshu5.png" class="bg-item bg-shokoshu5" alt="" />
+        <img src="./images/wine.png" class="bg-item bg-wine" alt="" />
+      </div>-->
+
+      <div class="hero-content">
+        <p class="hero-text">お酒の飲める、町中華</p>
+        <div class="hero-center">
+          <img
+            src="./images/tomi.svg"
+            alt="富"
+            class="hero-fuki fuki-left"
+            decoding="async"
+          />
+          <img
+            src="images/fuki-oji.png"
+            alt="富記"
+            class="logo-img-hero"
+            decoding="async"
+          />
+          <img
+            src="./images/ki.svg"
+            alt="記"
+            class="hero-fuki fuki-right"
+            decoding="async"
+          />
+        </div>
+        <p class="hero-text-under">国立駅から徒歩2分</p>
+      </div>
+    </section>
+
+    <section class="news-section">
+      <h2 class="news-title">NEWS</h2>
+      <div class="news-box">
+        <div class="news-item">
+          <span class="news-date">2025年6月30日</span>
+          <span class="news-text">公式HP開設いたしました</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">2025年6月30日</span>
+          <span class="news-text">営業時間の変更について</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="feature-media">
+        <img src="images/happousai.png" alt="料理画像" />
+      </div>
+
+      <div class="feature-content">
+        <div class="feature-heading">
+          <div class="feature-index">01</div>
+          <h3 class="feature-title">
+            ここでしか食べられない<br />こだわりの晩品を
+          </h3>
+        </div>
+        <p class="feature-text">
+          当店シェフが銀座老舗にて培った経験と味を皆様にお届け。麻婆豆腐、黒酢酢豚などの定番中華から
+          イカのトウチジャン炒めなどの当店独自メニューまで幅広くお楽しみいただけます。<br />
+          一品一品、シェフがこだわりつくしたお味を熱々の湯気、香ばしい香りと共にお召し上がりください。<br />
+          本格中華を、気軽に通える価格帯にてご提供。銀座仕込みの味わいを、国立で。
+        </p>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+      <h2 class="headline-square">当店スタッフによる一押しメニュー</h2>
+
+      <div class="menu-scroller">
+        <button class="menu-arrow prev" aria-label="前へ" type="button">
+          <svg
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M15.5 5.5L8.5 12l7 6.5"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <div class="menu-list" id="menuList">
+          <article class="menu-card">
+            <img src="images/gyoza.png" alt="ジャンボ餃子2個" />
+            <h3 class="block-title">ジャンボ餃子2個</h3>
+            <p class="menu-price">税込480円</p>
+            <span class="accent-line"></span>
+            <p class="menu-desc">
+              しっかりジャンボ。特製辣油との相性が抜群。食べ逃し厳禁。
+            </p>
+          </article>
+
+          <article class="menu-card">
+            <img src="images/kurozu-subuta.png" alt="黒酢酢豚" />
+            <h3 class="block-title">黒酢酢豚</h3>
+            <p class="menu-price">税込1080円</p>
+            <span class="accent-line"></span>
+            <p class="menu-desc">
+              香ばしく揚げた豚に黒酢のコク。飽きない定番人気。香ばしく揚げた豚に黒酢のコク。飽きない定番人気。
+            </p>
+          </article>
+
+          <article class="menu-card">
+            <img src="images/yurinchi.png" alt="油淋鶏" />
+            <h3 class="block-title">油淋鶏</h3>
+            <p class="menu-price">税込980円</p>
+            <p class="menu-desc">
+              カリッと鶏に爽やか香味ダレ。ビールが進む一皿。
+            </p>
+          </article>
+
+          <article class="menu-card">
+            <img src="images/yurinchi.png" alt="油淋鶏" />
+            <h3 class="block-title">油淋鶏</h3>
+            <p class="menu-price">税込980円</p>
+            <p class="menu-desc">
+              カリッと鶏に爽やか香味ダレ。ビールが進む一皿。
+            </p>
+          </article>
+
+          <article class="menu-card">
+            <img src="images/yurinchi.png" alt="油淋鶏" />
+            <h3 class="block-title">油淋鶏</h3>
+            <p class="menu-price">税込980円</p>
+            <p class="menu-desc">
+              カリッと鶏に爽やか香味ダレ。ビールが進む一皿。
+            </p>
+          </article>
+        </div>
+
+        <button class="menu-arrow next" aria-label="次へ" type="button">
+          <svg
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M8.5 5.5L15.5 12l-7 6.5"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="more-link-black">
+        <a href="#">全メニューを見る</a>
+      </div>
+    </section>
+
+    <section id="party" class="banquet" aria-label="宴会メニュー">
+      <div class="banquet__inner">
+        <!-- Left -->
+        <div class="left">
+          <div class="feature-content-white">
+            <div class="feature-heading-white">
+              <div class="feature-index">02</div>
+              <h3 class="feature-title">自由に料理を選べる<br class="sp-only" />宴会メニュー</h3>
+            </div>
+            <p class="feature-text-white">
+              国立駅から徒歩3分の抜群のアクセス。<br />
+              女子会、歓送迎会、宴会など、お任せください。
+              全コース、当店メニューからお好きなお料理を お選びいただけます。
+              4名様〜40名様までご予約お受けいたします。
+              飲み放題プランもご用意しております。
+            </p>
+          </div>
+
+          <div class="price-card" role="table" aria-label="ご宴会お値段表">
+            <p class="price-card__title">─ ご宴会お値段表 ─</p>
+            <ul class="price-list">
+              <li class="price-row">
+                <span>富記コース</span><span class="yen">3,980円</span>
+              </li>
+              <li class="price-row">
+                <span>満福コース</span><span class="yen">4,980円</span>
+              </li>
+              <li class="price-row">
+                <span>福福コース</span><span class="yen">6,480円</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- Right -->
+        <div class="right">
+          <img
+            class="hero-photo"
+            src="images/banquet.png"
+            alt="宴会料理の写真"
+          />
+
+          <div class="dl-area-wrapper">
+            <div class="delivery-title" aria-hidden="true">
+              <span>各種<br />デリバリー</span>
+            </div>
+            <div class="dl-area">
+              <a
+                class="dl-btn"
+                href="https://www.hotpepper.jp/strJ003984256/"
+                aria-label="Hot Pepper へ"
+              >
+                <img src="images/hot-papper.png" alt="HOT PEPPER グルメ" />
+              </a>
+              <a
+                class="dl-btn"
+                href="https://r.gnavi.co.jp/34wmz7390000/"
+                aria-label="ぐるなび へ"
+              >
+                <img src="images/gurunabi.png" alt="ぐるなび" />
+              </a>
+              <a
+                class="dl-btn"
+                href="https://tabelog.com/tokyo/A1325/A132503/13264444/"
+                aria-label="外部サイト へ"
+              >
+                <img src="images/tabelog.png" alt="外部サイト" />
+              </a>
+              <div class="more-link">
+                <a href="images/fuki-banquet.pdf" target="_blank" rel="noopener" aria-label="宴会メニュー（PDF）を開く">宴会について詳しく</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 任意：左の吹き出し。不要なら削除 -->
+      <div class="bubble">
+        生ビールも<br />飲み放題!!
+        <img src="images/beer.png" alt="ビールのアイコン" />
+      </div>
+    </section>
+
+    <section class="interior" aria-label="店内写真イメージ">
+      <h2 class="interior__title">店内写真イメージ</h2>
+
+      <div class="interior__viewport">
+        <button class="interior__arrow interior__arrow--prev" aria-label="前へ">
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <ul class="interior__track" id="interiorTrack">
+          <li class="interior__slide">
+            <figure class="interior__figure">
+              <img src="images/shop1.png" alt="カウンター席の様子" />
+              <figcaption class="interior__caption">
+                おひとり様でもお楽しみいただけます
+              </figcaption>
+            </figure>
+          </li>
+          <li class="interior__slide">
+            <figure class="interior__figure">
+              <img src="images/shop2.png" alt="テーブル席の様子" />
+              <figcaption class="interior__caption">
+                ジャズの流れる寛ぎ空間
+              </figcaption>
+            </figure>
+          </li>
+          <li class="interior__slide">
+            <figure class="interior__figure">
+              <img src="images/shop3.png" alt="奥の団体席の様子" />
+              <figcaption class="interior__caption">
+                最大40名様にてご利用可能
+              </figcaption>
+            </figure>
+          </li>
+          <li class="interior__slide">
+            <figure class="interior__figure">
+              <img src="images/shop3.png" alt="奥の団体席の様子" />
+              <figcaption class="interior__caption">
+                最大40名様にてご利用可能
+              </figcaption>
+            </figure>
+          </li>
+          <li class="interior__slide">
+            <figure class="interior__figure">
+              <img src="images/shop3.png" alt="奥の団体席の様子" />
+              <figcaption class="interior__caption">
+                最大40名様にてご利用可能
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+
+        <button class="interior__arrow interior__arrow--next" aria-label="次へ">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <div class="feature-white">
+        <div class="feature-media-drink">
+          <img src="images/drink-all.png" alt="料理画像" />
+        </div>
+
+        <div class="feature-content">
+          <div class="feature-heading">
+            <div class="feature-index">03</div>
+            <h3 class="feature-title">中華と楽しむ、こだわりの一杯</h3>
+          </div>
+          <p class="feature-text">
+            当店では、紹興酒3年・10年ものや香り高い桂花陳酒など、
+            本格中華に合う中国酒を豊富にご用意。ボトルキープも可能で、
+            お気に入りのお酒をいつでも楽しめます。
+            さらに、生ビールやハイボール、芋焼酎など定番のドリンクも充実。
+            料理との相性も抜群で、食事もお酒もじっくり味わえる、
+            そんなひとときをお届けします。
+          </p>
+          <div class="more-link-short">
+            <a href="#">ドリンクメニューを見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="takeout" class="takeout" aria-label="テイクアウト">
+      <div class="takeout__inner">
+        <h2 class="headline-square-white">テイクアウト</h2>
+
+        <div class="takeout__copywrap">
+          <!-- 左の模様（写真切り出しやPNGなどを90°回転表示） -->
+          <img
+            class="takeout__deco"
+            src="images/ramen-moyou.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <!-- コピー -->
+          <p class="takeout__copy">
+            <span>富記の料理を、</span><br />
+            <span>ご自宅で</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="takeout-info" aria-label="テイクアウト案内">
+      <div class="takeout-info__inner">
+        <div class="takeout-info__left">
+          <div class="takeout-info__title">
+            <img
+              src="images/flower-white.png"
+              alt=""
+              class="takeout-info__flower"
+            />
+            <h3>お店の味を<br />そのままテイクアウト</h3>
+            <img
+              src="images/flower-white.png"
+              alt=""
+              class="takeout-info__flower"
+            />
+          </div>
+
+          <p class="takeout-info__body">
+            汁物以外の全メニュー、テイクアウトにて<br />お楽しみいただけます。<br />
+            富記の特製料理の数々をご自宅でも<br />お召し上がりください。
+          </p>
+
+          <p class="takeout-info__tel">
+            <img
+              src="images/telephone-white.png"
+              alt=""
+              class="takeout-info__tel-ic"
+            />
+            <a href="tel:05054895892">050-5489-5892</a>
+          </p>
+
+          <p class="takeout-info__note">
+            \店頭で直接お受け取りの場合はお電話でも承ります/
+          </p>
+        </div>
+
+        <div class="takeout-info__photo">
+          <img src="images/kurozu-takeout.png" alt="テイクアウト料理" />
+        </div>
+
+        <div class="takeout-info__right">
+          <div class="delivery-title" aria-hidden="true">
+            <span>各種<br />デリバリー</span>
+          </div>
+
+          <div class="delivery-list">
+            <a
+              class="delivery-btn"
+              href="https://www.ubereats.com/jp/store/%E4%B8%AD%E8%8F%AF%E6%96%99%E7%90%86-%E5%AF%8C%E8%A8%98-chinese-cuisine-fuki/iTTc4vXZU4W6fzrCuIdFEQ?srsltid=AfmBOor48iqX5sRIGKNYhNUgGHkUC2LtKfQTNpe4j6yPOzimGpHjTPsT"
+              aria-label="Uber Eats へ"
+            >
+              <span class="delivery-btn__label">
+                <img
+                  src="images/uber-eats.png"
+                  class="derivery-img3"
+                  alt="Uber Eats"
+                />
+              </span>
+              <span class="delivery-btn__arrow" aria-hidden="true"></span>
+            </a>
+            <a
+              class="delivery-btn"
+              href="https://demae-can.com/shop/menu/3352366"
+              aria-label="出前館へ"
+            >
+              <span class="delivery-btn__label">
+                <img
+                  src="images/demaekan.png"
+                  class="derivery-img4"
+                  alt="出前館"
+                />
+              </span>
+              <span class="delivery-btn__arrow" aria-hidden="true"></span>
+            </a>
+            <a class="delivery-btn" href="#" aria-label="menuへ">
+              <span class="delivery-btn__label">
+                <img
+                  src="images/menu-delivery.png"
+                  class="derivery-img6"
+                  alt="menu"
+                />
+              </span>
+              <span class="delivery-btn__arrow" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="access">
+      <h2 class="headline-square">アクセス</h2>
+
+      <div class="access__grid">
+        <div class="access__info">
+          <div class="access__row">
+            <div class="access__th">住所</div>
+            <div class="access__td">
+              〒186-0004<br />
+              東京都国立市中1-10-13 第二下山ビル1F
+            </div>
+          </div>
+
+          <div class="access__row">
+            <div class="access__th">お問合せ<br />ご予約</div>
+            <div class="access__td access__tel">
+              <a href="tel:0425057781">042-505-7781</a>
+            </div>
+          </div>
+
+          <div class="access__row">
+            <div class="access__th">座席数</div>
+            <div class="access__td">
+              全40席　貸切可能人数　20名～50名<br />
+              宴会最大人数　着席時40名 立食時50名
+            </div>
+          </div>
+
+          <div class="access__row">
+            <div class="access__th">営業時間</div>
+            <div class="access__td">
+              ディナー　17:00～24:00（L.O.23:30）<br />
+              土・日　<br />
+              ランチ　11:30～15:00
+            </div>
+          </div>
+
+          <div class="access__row">
+            <div class="access__th">休業日</div>
+            <div class="access__td">月曜日</div>
+          </div>
+
+          <div class="access__row">
+            <div class="access__th">支払い方法</div>
+            <div class="access__td">クレジットカード／交通系IC／iD／QR決済</div>
+          </div>
+        </div>
+
+        <div class="access__map-wrap">
+        <div class="access__map">
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%9B%BD%E7%AB%8B%E5%B8%82%E4%B8%AD1-10-13%20%E7%AC%AC%E4%BA%8C%E4%B8%8B%E5%B1%B1%E3%83%93%E3%83%AB1F&hl=ja&z=16&output=embed"
+            width="100%"
+            height="340"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+        </div>
+          <div class="access__badge">国立駅より徒歩2分</div>
+        </div>
+
+  </div>
+</div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <!-- 左カラム -->
+
+      <div class="footer-col">
+        <h3 class="footer-head with-lines">各種予約サイト</h3>
+        <div class="footer-left">
+          <a
+            class="footer-btn footer-btn--left"
+            href="https://www.hotpepper.jp/strJ003984256/"
+          >
+            <span class="footer-btn__chev" aria-hidden="true"></span>
+            <span class="footer-btn__label">
+              <img
+                src="images/hot-papper-black.png"
+                class="derivery-img"
+                alt="hot-papper"
+              />
+            </span>
+          </a>
+
+          <a
+            class="footer-btn footer-btn--left"
+            href="https://r.gnavi.co.jp/34wmz7390000/"
+          >
+            <span class="footer-btn__chev" aria-hidden="true"></span>
+            <span class="footer-btn__label"
+              ><span class="footer-btn__label">
+                <img
+                  src="images/gurunabi-black.png"
+                  class="derivery-img"
+                  alt="ぐるなび"
+                /> </span
+            ></span>
+          </a>
+
+          <a
+            class="footer-btn footer-btn--left"
+            href="https://tabelog.com/tokyo/A1325/A132503/13264444/"
+          >
+            <span class="footer-btn__chev" aria-hidden="true"></span>
+            <span class="footer-btn__label">
+              <img
+                src="images/tabelog-black.png"
+                class="derivery-img2"
+                alt="食べログ"
+            /></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 中央カラム -->
+      <div class="footer-col footer-center">
+        <h2 class="footer-lead">ご予約・テイクアウト<br class="sp-only" />承ります</h2>
+
+        <!-- 電話ボックス（ニューモーフィック） -->
+        <a
+          href="tel:0425057781"
+          class="footer-phone"
+          aria-label="042-505-7781 に電話"
+        >
+          <img src="images/phone-black.png" alt="" class="tel-ic" />
+          <span class="tel-num-footer">042-505-7781</span>
+        </a>
+
+        <!-- 2行のナビ -->
+        <nav class="footer-nav" aria-label="フッターナビ">
+          <ul class="footer-nav__row">
+            <li><a href="/">ホーム</a></li>
+            <li><a href="#menu">メニュー</a></li>
+            <li><a href="#party">宴会</a></li>
+          </ul>
+          <ul class="footer-nav__row">
+            <li><a href="#takeout">テイクアウト</a></li>
+            <li><a href="#access">アクセス</a></li>
+          </ul>
+        </nav>
+
+        <!-- 店名＋SNS（任意） -->
+        <div class="footer-brandline">
+          <span class="footer-brandline__sub">中華料理</span>
+          <span class="footer-brandline__logo">富記</span>
+          <a
+            class="footer-sns"
+            href="https://www.instagram.com/chukaryouri_fuki/?igsh=cnA3Ym44MmRkYTRm#"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="images/instagram.png"
+              alt="Instagram"
+              class="footer-sns__img-instagram"
+            />
+          </a>
+          <a class="footer-sns" href="#" aria-label="X（旧Twitter）">
+            <img src="images/line.png" alt="LINE" class="footer-sns__img"
+          /></a>
+        </div>
+      </div>
+
+      <!-- 右カラム -->
+      <div class="footer-col footer-right">
+        <h3 class="footer-head with-lines">各種デリバリー</h3>
+
+        <a
+          class="footer-btn-right footer-btn--right"
+          href="https://www.ubereats.com/jp/store/%E4%B8%AD%E8%8F%AF%E6%96%99%E7%90%86-%E5%AF%8C%E8%A8%98-chinese-cuisine-fuki/iTTc4vXZU4W6fzrCuIdFEQ?srsltid=AfmBOor48iqX5sRIGKNYhNUgGHkUC2LtKfQTNpe4j6yPOzimGpHjTPsT"
+        >
+          <span class="footer-btn__label">
+            <img
+              src="images/uber-eats.png"
+              class="derivery-img3"
+              alt="Uber Eats"
+            />
+          </span>
+          <span
+            class="footer-btn__chev footer-btn__chev--right"
+            aria-hidden="true"
+          ></span>
+        </a>
+
+        <a
+          class="footer-btn-right footer-btn--right"
+          href="https://demae-can.com/shop/menu/3352366"
+        >
+          <span class="footer-btn__label">
+            <img src="images/demaekan.png" class="derivery-img4" alt="出前館"
+          /></span>
+          <span
+            class="footer-btn__chev footer-btn__chev--right"
+            aria-hidden="true"
+          ></span>
+        </a>
+
+        <a class="footer-btn-right footer-btn--right" href="#">
+          <span class="footer-btn__label"
+            ><img
+              src="images/menu-delivery.png"
+              class="derivery-img7"
+              alt="menu"
+          /></span>
+          <span
+            class="footer-btn__chev footer-btn__chev--right"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const scroller = document.getElementById("menuList");
+      const prevBtn = document.querySelector(".menu-arrow.prev");
+      const nextBtn = document.querySelector(".menu-arrow.next");
+
+      function getStep() {
+        const cards = scroller.querySelectorAll(".menu-card");
+        if (cards.length >= 2) {
+          const a = cards[0].getBoundingClientRect();
+          const b = cards[1].getBoundingClientRect();
+          return Math.round(b.left - a.left);
+        }
+        return scroller.clientWidth;
+      }
+      function scrollByStep(dir) {
+        scroller.scrollBy({ left: dir * getStep(), behavior: "smooth" });
+      }
+      prevBtn.addEventListener("click", () => scrollByStep(-1));
+      nextBtn.addEventListener("click", () => scrollByStep(1));
+
+      const hamburger = document.querySelector(".hamburger-container");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeBtn = document.getElementById("closeBtn");
+
+      function toggleMenu() {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.classList.toggle("open");
+        document.body.classList.toggle("no-scroll", isOpen);
+        hamburger.setAttribute("aria-expanded", String(isOpen));
+        mobileMenu.toggleAttribute("hidden", !isOpen);
+      }
+
+      hamburger.addEventListener("click", toggleMenu);
+      closeBtn.addEventListener("click", toggleMenu);
+
+      document.querySelectorAll("#mobileMenu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (mobileMenu.classList.contains("open")) toggleMenu();
+        });
+      });
+
+      // グローバルナビ開閉（必要なら）
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.getElementById("global-nav");
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", String(!expanded));
+          nav.style.maxHeight = expanded ? "0px" : nav.scrollHeight + "px";
+        });
+      }
+
+// ✅ 内装スライダ（ボタンは .interior__arrow--prev / --next）
+(() => {
+  const track = document.getElementById("interiorTrack");
+  const prev = document.querySelector(".interior__arrow--prev");
+  const next = document.querySelector(".interior__arrow--next");
+  if (!track || !prev || !next) return;
+
+  const slideWidthInterior = () => {
+    const styles = getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+    const card = track.querySelector(".interior__slide");
+    return card ? Math.round(card.getBoundingClientRect().width + gap) : 0;
+  };
+
+  prev.addEventListener("click", () => {
+    track.scrollBy({ left: -slideWidthInterior(), behavior: "smooth" });
+  });
+  next.addEventListener("click", () => {
+    track.scrollBy({ left:  slideWidthInterior(), behavior: "smooth" });
+  });
+})();
+
+
+      // フッターがビューポートに入ったらバナーを隠す
+      (function () {
+        const banner = document.querySelector(".reserve-banner");
+        const footer = document.querySelector(".footer"); // ← あなたのHTMLは <footer class="footer">
+        if (!banner || !footer || !("IntersectionObserver" in window)) return;
+
+        const io = new IntersectionObserver(
+          (entries) => {
+            const visible = entries.some((e) => e.isIntersecting);
+            banner.classList.toggle("is-hidden", visible);
+          },
+          {
+            // 少し手前で隠したいなら -10% や -20% に調整
+            rootMargin: "0px 0px -10% 0px",
+            threshold: [0, 0.01],
+          }
+        );
+        io.observe(footer);
+      })();
+    </script>
+  </body>
+</html>
